@@ -1,0 +1,2 @@
+#!/bin/bash
+ln  /bin/ls /alu-shell/basics/_ls_
