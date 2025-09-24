@@ -1,1 +1,0 @@
-My second readme in this repository and its in basics directory
