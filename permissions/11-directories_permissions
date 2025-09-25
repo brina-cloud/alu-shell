@@ -1,2 +1,2 @@
 #!/bin/bash
-for dir in */; do if [ -d "$dir" ]; then  chmod a+x "$dir"; fi; done 
+find . -type d -print0 | xargs -0 chmod a+x 
