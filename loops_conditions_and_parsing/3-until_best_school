@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Display best school 10times using only unti loop
+ i=1
+  until [ $i -gt 10 ]; do
+    echo "Best School"
+    ((i++))
+  done
