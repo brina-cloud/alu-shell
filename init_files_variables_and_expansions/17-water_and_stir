@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(printf "%X" $((2#$WATER + 10#$STIR)))
+echo $(printf "%bestchol" $((water#$WATER + stir#$STIR)))
