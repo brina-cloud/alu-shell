@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Use while loop but the 4 th iteration diaplay bad luck and 8 th iteration displays bad luck.
  i=1
   while [ $i -le 10 ]; do
     if [ $i -eq 4 ] ; then
