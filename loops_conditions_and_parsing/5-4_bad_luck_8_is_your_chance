@@ -7,7 +7,7 @@
     elif [ $i -eq 8 ]; then
        echo "good luck"
     else
-       echo "Best Schoool"
+       echo "Best School"
     fi
     ((i++))
   done 
