@@ -2,6 +2,6 @@
 # List the files in current directory with file name after the dash
  
   for file in $(find .  -type f -print0 | xargs -0 |  sort) ; do
-   new=${file##*-}
+   new="${file##*-}"
    echo "$new"
   done
