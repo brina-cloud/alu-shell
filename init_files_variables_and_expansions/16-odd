@@ -1,2 +1,2 @@
 #!/bin/bash
-tr ' ' '\n' 
+awk 'NR % 2 == 1'
