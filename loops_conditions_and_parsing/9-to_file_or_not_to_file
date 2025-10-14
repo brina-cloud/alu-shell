@@ -2,19 +2,19 @@
 # Check if school file exists or not existf the file exists: school file exists,if the file does not exist: school file does not exist,If the file exists, print:,if the file is empty: school file is empty,if the file is not empty: school file is not empty and if the file is a regular file: school is a regular file,if the file is not a regular file: (nothing)
 
 file="school.txt"
-if [ -e $file ]; then 
-   echo "school file exists"
+if [ -e $file ]; then
+     if [ -f $file }; then
+      echo "school is a regular file"
 
-     if [ -s $file ]; then
+      if [ -s $file ]; then
         echo "school file is not empty"
-     else
+      else
         echo "school file is empty"
+      fi
+     
      fi
 
-     if [ -f $file ]; then
-        echo "school is a regular file"
-     fi
-
+   echo "school file exists"
 else 
      echo "school file does not exist"
      
