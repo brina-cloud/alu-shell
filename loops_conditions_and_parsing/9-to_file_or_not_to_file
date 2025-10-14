@@ -17,8 +17,8 @@ file=school.txt
         echo " " 
      fi
 
- else 
+  else 
      echo "school file does not exist"
      
- fi
+  fi
 
