@@ -7,9 +7,9 @@ file=school.txt
  else
    echo "school file exists"
      if [ -s $file ]; then
-        echo "school is not empty"
+        echo "school file is not empty"
      else
-        echo "school is empty"
+        echo "school file is empty"
      fi
 
      if [ -f $file ]; then
