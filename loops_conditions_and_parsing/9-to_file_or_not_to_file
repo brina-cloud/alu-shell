@@ -6,14 +6,16 @@ file=school.txt
    echo "school file doesn't exists"
  else
    echo "school file exists"
-     if [ -s  $file ]; then
+     if [ -s $file ]; then
         echo "school is not empty"
-     elif [ -f $file ]; then
+     else
+        echo "school is empty"
+     fi
+
+     if [ -f $file ]; then
         echo "school is a regular file"
-     elif [ ! -f $file ]; then
-        echo ' '
      else 
-        echo "school file is  empty" 
+        echo " " 
      fi
  fi
 
