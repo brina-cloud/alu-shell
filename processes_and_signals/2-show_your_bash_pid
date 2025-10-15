@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#list pid of all processes with word bash
+ps aux | grep 'bash' 
