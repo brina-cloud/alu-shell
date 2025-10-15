@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# kill the process and instaed of displaying terminated we display killed.
+
+ pkill -9 -f 7-highlander
+
+ 
