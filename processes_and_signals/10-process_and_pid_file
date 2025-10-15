@@ -2,11 +2,11 @@
 # create  /var/run/myscript.pid with its PID and trap sugnal like SIGTERM and SIGINT and delete from SIGQUIT
 
 touch /var/run/myscript.pid 
-pgrep -f /var/run/myscript.pid >>  /var/run/myscript.pid 
+echo "$$" >>  /var/run/myscript.pid 
 
-trap 'echo "I hate the kill command"' SIGTERM
+trap 'echo "I hate the kill command"; rm -f /var/run/myscript.pid' SIGTERM
 trap 'echo "Y U no love me?!"' SIGINT
-trap 'rm /var/run/myscript.pid' SIGQUIT 
+trap 'rm -f /var/run/myscript.pid' SIGQUIT 
 
 while true; do
  echo "To infinity and beyond"
