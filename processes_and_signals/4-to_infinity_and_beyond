@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# displays to infinity and beyond until its killed using ctrl+c
+ while true; do
+  echo "To infinity and beyond"
+  sleep 2;
+ done
