@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# infinity loop that was terminated using kill command.
+kill 10960
+
