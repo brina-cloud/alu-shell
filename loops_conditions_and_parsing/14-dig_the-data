@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Use the awk not for while or if loop.
+
+log=apache-access.log 
+awk -F' ' ' { print $1, $9 }' $log | sort | uniq -c | sort -rn
