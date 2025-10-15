@@ -3,7 +3,6 @@
 
 pid=$(pgrep -f 4-to_infinity_and_beyond)
  if [[ -n $pid ]]; then
-  echo " Process found and going to be terminated "
   kill " $pid "
  else
    echo " process not found"
