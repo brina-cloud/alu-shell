@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # List the files in current directory with file name after the dash
  
-  for file in $(find .  -type f -print0 | xargs -0 |  sort) ; do
-   new="${file##*-}"
+  for file in * ; do
+   new="${file#*-}"
    echo "$new"
   done
