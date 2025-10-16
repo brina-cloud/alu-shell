@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# daemons or processes are managed using arguments like start,stop and restart.
+PROCESS="manage_my_process"
+PID="/var/run/my_process.pid"
+
+start() {
+    if [ -f "$PID" ] && kill -0 $(cat "$PID") 2>/dev/null; then
+        echo "$PROCESS is already running"
+        return
+    fi
+    
+    bash "PROCESS" &
+    echo $! > "$PID"
+    echo "$PROCESS started"
+}
+
+stop() {
+    if [ -f "$PID" ]; then
+        PID_TO_KILL=$(cat "$PID")
+        if kill -0 "$PID_TO_KILL" 2>/dev/null; then
+            kill "$PID_TO_KILL"
+            rm -f "$PID"
+            echo "$PROCESS stopped"
+        else
+            echo "$PROCESS not running but PID file exists"
+            rm -f "$PID"
+        fi
+    else
+        echo "$PROCESS is not running"
+    fi
+}
+
+restart() {
+    stop
+    start
+    echo "$PROCESS restarted"
+}
+
+# Argument handling
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        restart
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+

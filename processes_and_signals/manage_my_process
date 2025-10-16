@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Write a script that starts, stops and restarts the manage_my_process that is a daemon.
+
+while true; do
+ echo "I am alive" >> /tmp/my_process
+ sleep 2;
+done
+
